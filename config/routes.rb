@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
+  # page_controller
   get 'pages/home'
   get 'pages/about'
   get 'pages/media'
   get 'pages/menu'
   get 'pages/hobby'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # theme_controller
+  post 'toggle_theme', to: 'themes#toggle', as: :toggle_theme
+
 end
