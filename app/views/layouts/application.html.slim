@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title= "БокОБок"
+    meta name="description" content= "Страничка нашей парочки"
+    meta name="keywords" content= "парень девушка отношения"
+
+    = csrf_meta_tags
+    = stylesheet_link_tag "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"
+
+
+    / link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"
+    / = stylesheet_link_tag 'media', media: 'all', 'data-turbolinks-track' => true
+  body
+    .overlay
+      nav
+        =render "layouts/navbar"
+      main
+        = yield
+      footer
+        =render "layouts/footer"

@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: dialog_admin1
+  password: dialog_password1
+  host: localhost
+
+development:
+  <<: *default
+  database: dialog_database1
+
+#test:
+#  <<: *default
+#  database: todo_app_test
+
+#production:
+#  <<: *default
+#  database: todo_app_production
